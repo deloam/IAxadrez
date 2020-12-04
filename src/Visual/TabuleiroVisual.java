@@ -4,8 +4,6 @@ import Objetos.Tabuleiro;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.ArrayList;
-import javax.swing.JOptionPane;
-
 import javax.swing.JPanel;
 
 public class TabuleiroVisual extends JPanel {
@@ -134,7 +132,7 @@ public class TabuleiroVisual extends JPanel {
                 }
             }
             mata = 8;
-            //verifica se pode ter possiveis colioes do cavalo com as rainhas
+            //verifica se pode ter possiveis colisoes do cavalo com as rainhas
             for (int i = 0; i < xx.size(); i++) {
                 for (int j = 0; j < 8; j++) {
                     tempx = xx.get(i);
