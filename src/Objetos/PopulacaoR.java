@@ -7,7 +7,6 @@ public class PopulacaoR {
     private int tamPopulacao;
 
     //Construtor dos Individuos(Rainhas)
-    
     public PopulacaoR(int tamPop, boolean individuosAleatorios) {
         tamPopulacao = tamPop;
         individuos = new Rainha[tamPop];
@@ -53,11 +52,11 @@ public class PopulacaoR {
             }
         }
     }
-
+// retorna a quantidade de individuos validos
     public int getNumIndividuos() {
         int num = 0;
-        for (int i = 0; i < individuos.length; i++) {
-            if (individuos[i] != null) {
+        for (Rainha individuo : individuos) {
+            if (individuo != null) {
                 num++;
             }
         }
@@ -70,22 +69,22 @@ public class PopulacaoR {
 
     public double getTotalAptidao() {
         double total = 0;
-        for (int i = 0; i < individuos.length; i++) {
-            if (individuos[i] != null) {
-                total += individuos[i].getAptidao();
+        for (Rainha individuo : individuos) {
+            if (individuo != null) {
+                total += individuo.getAptidao();
             }
         }
         return total;
     }
-
+// retornna o tamanho da população
     public int getTamPopulacao() {
         return tamPopulacao;
     }
-
+// retorna uma rainha em determinda posição
     public Rainha getIndivduo(int pos) {
         return individuos[pos];
     }
-
+// retorna os individuas (rainhas)
     public Rainha[] getIndividuos() {
         return individuos;
     }
